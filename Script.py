@@ -7,7 +7,7 @@ class text(object):
 
 𝖲𝗈𝗆𝖾 𝗆𝖺𝗍𝖾𝗋𝗂𝖺𝗅 𝗆𝖺𝗒 𝗂𝗇𝖼𝗅𝗎𝖽𝖾 𝖾𝗑𝗉𝗅𝗂𝖼𝗂𝗍 𝗈𝗋 𝗀𝗋𝖺𝗉𝗁𝗂𝖼 𝖼𝗈𝗇𝗍𝖾𝗇𝗍 𝗍𝗁𝖺𝗍 𝗂𝗌 𝗇𝗈𝗍 𝗌𝗎𝗂𝗍𝖺𝖻𝗅𝖾 𝖿𝗈𝗋 𝗆𝗂𝗇𝗈𝗋𝗌.
 
-<blockquote><b>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/TechifyRahul'>ʀᴀʜᴜʟ</a></b></blockquote>"""
+<blockquote><b>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/TechifyBots'>ʀᴀʜᴜʟ</a></b></blockquote>"""
 
   LOG = """👁️‍🗨️ 𝘜𝘚𝘌𝘙 𝘋𝘌𝘛𝘈𝘐𝘓𝘚
 
