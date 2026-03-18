@@ -79,7 +79,7 @@ async def check_normal_join(client: Client, message: ChatMemberUpdated):
     if message.from_user and message.new_chat_member and message.new_chat_member.status in [enums.ChatMemberStatus.MEMBER, enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER]:
         await auto_delete_fsub_and_start(client, message.from_user.id)
 
-@Client.on_message(filters.command("delreq") & filters.private & filters.user(ADMIN))
+@Client.on_message(filters.command("delreq") & filters.private & filters.user(ADMIN_ID))
 async def del_requests(client: Client, message: Message):
     await tb.del_join_req()
     await message.reply("**⚙ Successfully join request cache deleted.**")
