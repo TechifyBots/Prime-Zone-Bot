@@ -1,8 +1,7 @@
 from pyrogram import Client, filters
-from vars import ADMIN_ID, ADMIN_USERNAME, IS_FSUB
+from vars import ADMIN_ID, ADMIN_USERNAME
 from pyrogram.types import *
 from Database.userdb import udb
-from .fsub import get_fsub
 from Database.maindb import mdb
 import pytz
 
@@ -11,7 +10,6 @@ async def my_plan(client, message):
     if await udb.is_user_banned(message.from_user.id):
         await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support 🧑‍💻", url=f"https://t.me/{ADMIN_USERNAME}")]]))
         return
-    if IS_FSUB and not await get_fsub(client, message):return
     global_limits = await mdb.get_global_limits()
     FREE_LIMIT = global_limits["free_limit"]
     user_id = message.from_user.id
