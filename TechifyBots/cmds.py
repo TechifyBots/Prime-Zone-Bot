@@ -5,7 +5,6 @@ from Database.maindb import mdb
 from Database.userdb import udb
 from datetime import datetime
 import pytz, random, asyncio
-from .fsub import get_fsub
 from Script import text
 
 async def get_updated_limits():
@@ -20,7 +19,6 @@ async def start_command(client, message):
     if await udb.is_user_banned(message.from_user.id):
         await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support 🧑‍💻", url=f"https://t.me/{ADMIN_USERNAME}")]]))
         return
-    if IS_FSUB and not await get_fsub(client, message):return
     if await udb.get_user(message.from_user.id) is None:
         await udb.addUser(message.from_user.id, message.from_user.first_name)
         bot = await client.get_me()
@@ -53,7 +51,6 @@ async def send_random_video(client: Client, message: Message):
     if limits.get('maintenance', False):
         await message.reply_text("**🛠️ Bot Under Maintenance — Back Soon!**")
         return
-    if IS_FSUB and not await get_fsub(client, message):return
     user_id = message.from_user.id
     user = await mdb.get_user(user_id)
     plan = user.get("plan", "free")
@@ -84,8 +81,3 @@ async def send_random_video(client: Client, message: Message):
         except Exception as e:
             print(f"Error sending video: {e}")
             await message.reply_text("Failed to send video..")
-
-
-
-
-
