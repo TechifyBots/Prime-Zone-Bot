@@ -1,6 +1,7 @@
 from typing import Any
 from config import MONGO_URI
 from motor import motor_asyncio
+from bson import ObjectId
 import pytz
 IST = pytz.timezone("Asia/Kolkata")
 client: motor_asyncio.AsyncIOMotorClient[Any] = motor_asyncio.AsyncIOMotorClient(MONGO_URI)
@@ -95,5 +96,24 @@ class dypixx:
         except Exception as e:
             print("Error in get_active_promo: ", e)
             return None
+
+    async def delete_user(self, identifier: int | str | ObjectId) -> bool:
+        try:
+            query = {}
+            if isinstance(identifier, int):
+                query = {"user_id": identifier}
+                self.cache.pop(identifier, None)
+            elif isinstance(identifier, (str, ObjectId)):
+                query = {"_id": ObjectId(identifier)} if isinstance(identifier, str) else {"_id": identifier}
+                doc = await self.users.find_one(query)
+                if doc and "user_id" in doc:
+                    self.cache.pop(int(doc["user_id"]), None)
+            else:
+                return False
+            result = await self.users.delete_one(query)
+            return result.deleted_count > 0
+        except Exception as e:
+            print("Error in delete_user:", e)
+            return False
 
 udb = dypixx()
