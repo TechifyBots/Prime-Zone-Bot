@@ -1,5 +1,5 @@
 import pytz
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from Database.userdb import udb
 from Database.maindb import mdb
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -9,7 +9,10 @@ from config import ADMIN_ID
 async def my_plan(client, message):
     if await udb.is_user_banned(message.from_user.id):
         await message.reply("**🚫 You are banned from using this bot**",
-                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🧑‍💻", user_id=int(ADMIN_ID))]]))
+                            reply_markup=InlineKeyboardMarkup([
+                                [InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🧑‍💻", user_id=int(ADMIN_ID), style=enums.ButtonStyle.PRIMARY)]
+                            ])
+                           )
         return
     global_limits = await mdb.get_global_limits()
     FREE_LIMIT = global_limits["free_limit"]
