@@ -1,11 +1,11 @@
-from pyrogram import Client, filters
-from pyrogram.types import *
-from vars import *
+import asyncio
+import random
+from pyrogram import Client, filters, enums
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from Script import text
 from Database.maindb import mdb
 from Database.userdb import udb
-from datetime import datetime
-import pytz, random, asyncio
-from Script import text
+from config import ADMIN_ID, LOG_CHANNEL, PICS, DATABASE_CHANNEL_ID, FREE_LIMIT, PRIME_LIMIT
 
 async def get_updated_limits():
         global FREE_LIMIT, PRIME_LIMIT
@@ -17,13 +17,13 @@ async def get_updated_limits():
 @Client.on_message(filters.command("start") & filters.private)
 async def start_command(client, message):
     if await udb.is_user_banned(message.from_user.id):
-        await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support 🧑‍💻", url=f"https://t.me/{ADMIN_USERNAME}")]]))
+        await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🧑‍💻", user_id=int(ADMIN_ID), style=enums.ButtonStyle.PRIMARY)]]))
         return
     if await udb.get_user(message.from_user.id) is None:
         await udb.addUser(message.from_user.id, message.from_user.first_name)
         bot = await client.get_me()
         await client.send_message(
-            LOG_CHNL,
+            LOG_CHANNEL,
             text.LOG.format(
                 message.from_user.id,
                 getattr(message.from_user, "dc_id", "N/A"),
@@ -36,16 +36,16 @@ async def start_command(client, message):
         photo=random.choice(PICS),
         caption=text.START.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("🍿 𝖡𝗎𝗒 𝖲𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 🍾", callback_data="pro")],
             [InlineKeyboardButton("ℹ️ 𝖠𝖻𝗈𝗎𝗍", callback_data="about"),
-             InlineKeyboardButton("📚 𝖧𝖾𝗅𝗉", callback_data="help")] 
+             InlineKeyboardButton("📚 𝖧𝖾𝗅𝗉", callback_data="help")],
+            [InlineKeyboardButton("🍿 𝖡𝗎𝗒 𝖲𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 🍾", callback_data="pro", style=enums.ButtonStyle.PRIMARY)]
         ])
     )
 
 @Client.on_message(filters.command("getvideos") & filters.private)
 async def send_random_video(client: Client, message: Message):
     if await udb.is_user_banned(message.from_user.id):
-        await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support 🧑‍💻", url=f"https://t.me/{ADMIN_USERNAME}")]]))
+        await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 🧑‍💻", user_id=int(ADMIN_ID), style=enums.ButtonStyle.PRIMARY)]]))
         return
     limits = await get_updated_limits()
     if limits.get('maintenance', False):
