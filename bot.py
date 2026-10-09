@@ -80,5 +80,7 @@ class Bot(Client):
         await super().stop(*args, **kwargs)
         print("Bot stopped.")
 
+bot = Bot()
+
 if __name__ == "__main__":
-    Bot().run()
+    bot.run()
