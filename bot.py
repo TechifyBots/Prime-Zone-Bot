@@ -1,24 +1,35 @@
-from vars import *
-import time
 import os
-from pytz import timezone
+import asyncio
+import aiohttp
 from datetime import datetime
-from kurigram import Client
+from pytz import timezone
+from pyrogram import Client
 from aiohttp import web
+from config import API_ID, API_HASH, BOT_TOKEN, ADMIN_ID, LOG_CHANNEL, PING_URL
 
 routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route(request):
-    return web.Response(
-        text="<h3 align='center'><b>I am Alive</b></h3>",
-        content_type='text/html'
-    )
+    return web.Response(text="<h3 align='center'><b>I am Alive</b></h3>", content_type='text/html')
 
 async def web_server():
     app = web.Application(client_max_size=30_000_000)
     app.add_routes(routes)
     return app
+
+async def keep_alive():
+    if not PING_URL:
+        return
+    timeout = aiohttp.ClientTimeout(total=15)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        while True:
+            try:
+                async with session.get(PING_URL) as resp:
+                    print(f"Keep-alive: {resp.status}")
+            except Exception as e:
+                print(f"Keep-alive error: {e}")
+            await asyncio.sleep(300)
 
 class Bot(Client):
     def __init__(self):
@@ -31,27 +42,26 @@ class Bot(Client):
             workers=200,
             sleep_threshold=15
         )
-        self.START_TIME = time.time()
 
-    async def start(self):
+    async def start(self, *args, **kwargs):
         app = web.AppRunner(await web_server())
         await app.setup()
         try:
             await web.TCPSite(app, "0.0.0.0", int(os.getenv("PORT", 8080))).start()
             print("Web server started.")
+            if PING_URL:
+                asyncio.create_task(keep_alive())
         except Exception as e:
             print(f"Web server error: {e}")
-
-        await super().start()
+        await super().start(*args, **kwargs)
         me = await self.get_me()
         print(f"Bot Started as {me.first_name}")
-
         if isinstance(ADMIN_ID, int):
             try:
                 await self.send_message(ADMIN_ID, f"**{me.first_name} is started...**")
             except Exception as e:
                 print(f"Error sending message to admin: {e}")
-        if LOG_CHNL:
+        if LOG_CHANNEL:
             try:
                 now = datetime.now(timezone("Asia/Kolkata"))
                 msg = (
@@ -60,15 +70,13 @@ class Bot(Client):
                     f"⏰ Time : `{now.strftime('%I:%M:%S %p')}`\n"
                     f"🌐 Timezone : `Asia/Kolkata`"
                 )
-                await self.send_message(LOG_CHNL, msg)
+                await self.send_message(LOG_CHANNEL, msg)
             except Exception as e:
                 print(f"Error sending to LOG_CHANNEL: {e}")
 
-    async def stop(self, *args):
-        await super().stop()
+    async def stop(self, *args, **kwargs):
+        await super().stop(*args, **kwargs)
         print("Bot stopped.")
 
-bot = Bot()
-
 if __name__ == "__main__":
-    bot.run()
+    Bot().run()
