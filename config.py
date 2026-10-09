@@ -8,7 +8,7 @@ MONGO_URI = os.getenv("MONGO_URI", "")
 DATABASE_CHANNEL_ID = int(os.getenv("DATABASE_CHANNEL_ID", ""))
 ADMIN_ID = int(os.getenv("ADMIN_ID", "1255023013"))
 PICS = (os.environ.get("PICS", "https://i.ibb.co/MDssddJp/pic.jpg https://i.ibb.co/n8fQ2xcx/pic.jpg")).split()
-LOG_CHNL = int(os.getenv("LOG_CHNL", ""))
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", ""))
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "TechifyBots") # Without @
 IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" For Enable Force Subscribe
 AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split())) # Add Multiple channel ids
