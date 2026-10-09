@@ -1,9 +1,9 @@
+import pytz
 from pyrogram import Client, filters
-from vars import ADMIN_ID, ADMIN_USERNAME
-from pyrogram.types import *
 from Database.userdb import udb
 from Database.maindb import mdb
-import pytz
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from config import ADMIN_ID, ADMIN_USERNAME
 
 @Client.on_message(filters.command("myplan") & filters.private)
 async def my_plan(client, message):
