@@ -227,7 +227,7 @@ async def broadcasting_func(client: Client, message: Message):
     for user in all_users:
         uid = user.get("user_id")
         if not uid:
-            if await tb.delete_user(user.get("_id")):
+            if await udb.delete_user(user.get("_id")):
                 failed += 1
             continue
         users_by_id[uid].append(user)
