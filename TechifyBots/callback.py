@@ -1,8 +1,14 @@
-from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram import Client
+import random
+from pyrogram import Client, enums
 from Script import text
-from vars import ADMIN_ID
+from config import ADMIN_ID
 from Database.maindb import mdb
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    InputMediaPhoto,
+)
 
 @Client.on_callback_query()
 async def callback_query_handler(client, query: CallbackQuery):
@@ -11,9 +17,9 @@ async def callback_query_handler(client, query: CallbackQuery):
             await query.message.edit_caption(
                 caption=text.START.format(query.from_user.mention),
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("🍿 𝖡𝗎𝗒 𝖲𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 🍾", callback_data="pro")],
                     [InlineKeyboardButton("ℹ️ 𝖠𝖻𝗈𝗎𝗍", callback_data="about"),
-                     InlineKeyboardButton("📚 𝖧𝖾𝗅𝗉", callback_data="help")]
+                     InlineKeyboardButton("📚 𝖧𝖾𝗅𝗉", callback_data="help")],
+                    [InlineKeyboardButton("🍿 𝖡𝗎𝗒 𝖲𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 🍾", callback_data="pro", style=enums.ButtonStyle.PRIMARY)]
                 ])
             )
 
@@ -22,8 +28,8 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.HELP,
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("📢 𝖠𝖽𝗆𝗂𝗇 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌", callback_data="admincmds")],
-                    [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start"),
-                     InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close")]
+                    [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start", style=enums.ButtonStyle.PRIMARY),
+                     InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close", style=enums.ButtonStyle.DANGER)]
                 ])
             )
 
@@ -32,8 +38,8 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.ABOUT,
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 👨‍💻", user_id=int(ADMIN_ID))],
-                    [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start"),
-                     InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close")]
+                    [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start", style=enums.ButtonStyle.PRIMARY),
+                     InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close", style=enums.ButtonStyle.DANGER)]
                 ])
             )
 
@@ -44,8 +50,8 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=pro_text,
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("💳 𝖴𝗉𝗀𝗋𝖺𝖽𝖾 / 𝖯𝖺𝗒𝗆𝖾𝗇𝗍", user_id=int(ADMIN_ID))],
-                    [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start"),
-                     InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close")]
+                    [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start", style=enums.ButtonStyle.PRIMARY),
+                     InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close", style=enums.ButtonStyle.DANGER)]
                 ])
             )
 
@@ -56,7 +62,7 @@ async def callback_query_handler(client, query: CallbackQuery):
                 await query.message.edit_caption(
                     caption=text.ADMIN_COMMANDS,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="help")]
+                        [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="help", style=enums.ButtonStyle.PRIMARY)]
                     ])
                 )
 
