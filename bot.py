@@ -1,4 +1,5 @@
 import os
+import time
 import asyncio
 import aiohttp
 from datetime import datetime
@@ -42,6 +43,7 @@ class Bot(Client):
             workers=200,
             sleep_threshold=15
         )
+        self.START_TIME = time.time()
 
     async def start(self, *args, **kwargs):
         app = web.AppRunner(await web_server())
