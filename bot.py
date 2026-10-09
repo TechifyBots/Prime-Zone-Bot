@@ -1,16 +1,19 @@
 from vars import *
 import time
+import os
 from pytz import timezone
 from datetime import datetime
-import os
-from pyrogram import Client
+from kurigram import Client
 from aiohttp import web
 
 routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route(request):
-    return web.Response(text="<h3 align='center'><b>I am Alive</b></h3>", content_type='text/html')
+    return web.Response(
+        text="<h3 align='center'><b>I am Alive</b></h3>",
+        content_type='text/html'
+    )
 
 async def web_server():
     app = web.Application(client_max_size=30_000_000)
@@ -39,16 +42,15 @@ class Bot(Client):
         except Exception as e:
             print(f"Web server error: {e}")
 
-
         await super().start()
         me = await self.get_me()
         print(f"Bot Started as {me.first_name}")
+
         if isinstance(ADMIN_ID, int):
             try:
                 await self.send_message(ADMIN_ID, f"**{me.first_name} is started...**")
             except Exception as e:
                 print(f"Error sending message to admin: {e}")
-
         if LOG_CHNL:
             try:
                 now = datetime.now(timezone("Asia/Kolkata"))
@@ -64,6 +66,9 @@ class Bot(Client):
 
     async def stop(self, *args):
         await super().stop()
-        print(f"{me.first_name} Bot stopped.")
+        print("Bot stopped.")
 
 bot = Bot()
+
+if __name__ == "__main__":
+    bot.run()
