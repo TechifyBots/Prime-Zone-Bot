@@ -44,33 +44,32 @@ class text(object):
 
 <blockquote><i>𝖤𝗏𝖾𝗋𝗒 𝖼𝗈𝗇𝗍𝗋𝗂𝖻𝗎𝗍𝗂𝗈𝗇 𝗄𝖾𝖾𝗉𝗌 𝗍𝗁𝖾 𝗌𝖾𝗋𝗏𝖾𝗋𝗌 𝗁𝗎𝗆𝗆𝗂𝗇𝗀. 𝖳𝗁𝖺𝗇𝗄 𝗒𝗈𝗎! 💖</i></blockquote>"""
 
-  PRO = """<b><u>🆓 𝖥𝗋𝖾𝖾 𝖯𝗅𝖺𝗇</u></b>
+  PRO = """<blockquote>💎 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗣𝗹𝗮𝗻𝘀</blockquote>
 
-» This plan allows you to request up to <b>{free_limit}</b> files per day.  
-» Each video must be under 5 minutes.  
-» Completely free — no payment required.
+<b><u>🆓 𝖥𝗋𝖾𝖾 𝖯𝗅𝖺𝗇</u></b>
 
-If you want to unlock more content and enjoy a smoother experience, consider upgrading to a premium plan:
+📁 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝗎𝗉 𝗍𝗈 <b>{free_limit}</b> 𝖿𝗂𝗅𝖾𝗌 𝗉𝖾𝗋 𝖽𝖺𝗒.
+⏱️ 𝖵𝗂𝖽𝖾𝗈 𝖽𝗎𝗋𝖺𝗍𝗂𝗈𝗇 𝗆𝗎𝗌𝗍 𝖻𝖾 𝗎𝗇𝖽𝖾𝗋 𝟧 𝗆𝗂𝗇𝗎𝗍𝖾𝗌.
+🎉 𝖥𝗋𝖾𝖾 𝗍𝗈 𝗎𝗌𝖾 — 𝗇𝗈 𝗉𝖺𝗒𝗆𝖾𝗇𝗍 𝗋𝖾𝗊𝗎𝗂𝗋𝖾𝖽.
+
+🚀 𝖴𝗉𝗀𝗋𝖺𝖽𝖾 𝗍𝗈 𝖺 𝗉𝗋𝖾𝗆𝗂𝗎𝗆 𝗉𝗅𝖺𝗇 𝖿𝗈𝗋 𝗁𝗂𝗀𝗁𝖾𝗋 𝗅𝗂𝗆𝗂𝗍𝗌 𝖺𝗇𝖽 𝖺 𝖻𝖾𝗍𝗍𝖾𝗋 𝖾𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾.
 
 <b><u>💎 𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖯𝗅𝖺𝗇𝗌</u></b>
 
-<b>🥈 𝖲𝗂𝗅𝗏𝖾𝗋 𝖯𝗅𝖺𝗇</b>  
-» <b>1 Week</b> — 25 INR  
-» Daily limit: <b>{prime_limit}</b> files
+<b>🥈 𝖲𝗂𝗅𝗏𝖾𝗋 𝖯𝗅𝖺𝗇</b>
+📅 𝟣 𝖶𝖾𝖾𝗄 — 𝟤𝟧 𝖨𝖭𝖱
+📁 𝖣𝖺𝗂𝗅𝗒 𝗅𝗂𝗆𝗂𝗍: <b>{prime_limit}</b> 𝖿𝗂𝗅𝖾𝗌
 
-<b>🥇 𝖦𝗈𝗅𝖽 𝖯𝗅𝖺𝗇</b>  
-» <b>15 Days</b> — 40 INR  
-» Daily limit: <b>{prime_limit}</b> files
+<b>🥇 𝖦𝗈𝗅𝖽 𝖯𝗅𝖺𝗇</b>
+📅 𝟣𝟧 𝖣𝖺𝗒𝗌 — 𝟦𝟢 𝖨𝖭𝖱
+📁 𝖣𝖺𝗂𝗅𝗒 𝗅𝗂𝗆𝗂𝗍: <b>{prime_limit}</b> 𝖿𝗂𝗅𝖾𝗌
 
-<b>💠 𝖣𝗂𝖺𝗆𝗈𝗇𝖽 𝖯𝗅𝖺𝗇</b>  
-» <b>1 Month</b> — 60 INR  
-» Daily limit: <b>{prime_limit}</b> files
+<b>💠 𝖣𝗂𝖺𝗆𝗈𝗇𝖽 𝖯𝗅𝖺𝗇</b>
+📅 𝟣 𝖬𝗈𝗇𝗍𝗁 — 𝟨𝟢 𝖨𝖭𝖱
+📁 𝖣𝖺𝗂𝗅𝗒 𝗅𝗂𝗆𝗂𝗍: <b>{prime_limit}</b> 𝖿𝗂𝗅𝖾𝗌
 
-<a href='https://techifybots.github.io/PayWeb'>📷 Click here to scan QR and pay</a>
-
-<blockquote>
-<b>Note:</b> Once a plan is selected, it cannot be changed.  
-All payments are <b>non-refundable</b>, so please review your choice carefully before proceeding.</blockquote>"""
+<blockquote>💳 <a href='https://techifybots.vercel.app/pay'>𝖲𝖼𝖺𝗇 𝖰𝖱 𝖢𝗈𝖽𝖾 & 𝖯𝖺𝗒</a></blockquote><blockquote>⚠️ <b>𝖨𝗆𝗉𝗈𝗋𝗍𝖺𝗇𝗍 𝖭𝗈𝗍𝖾</b>🔒 𝖮𝗇𝖼𝖾 𝖺 𝗉𝗅𝖺𝗇 𝗂𝗌 𝗌𝖾𝗅𝖾𝖼𝗍𝖾𝖽, 𝗂𝗍 𝖼𝖺𝗇𝗇𝗈𝗍 𝖻𝖾 𝖼𝗁𝖺𝗇𝗀𝖾𝖽.
+🚫 𝖠𝗅𝗅 𝗉𝖺𝗒𝗆𝖾𝗇𝗍𝗌 𝖺𝗋𝖾 <b>𝗇𝗈𝗇-𝗋𝖾𝖿𝗎𝗇𝖽𝖺𝖻𝗅𝖾</b>. 𝖯𝗅𝖾𝖺𝗌𝖾 𝗋𝖾𝗏𝗂𝖾𝗐 𝗒𝗈𝗎𝗋 𝗉𝗅𝖺𝗇 𝖼𝖺𝗋𝖾𝖿𝗎𝗅𝗅𝗒 𝖻𝖾𝖿𝗈𝗋𝖾 𝗉𝖺𝗒𝗂𝗇𝗀.</blockquote>"""
 
   ADMIN_COMMANDS =   """<blockquote>⚙️ 𝗔𝗱𝗺𝗶𝗻 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</blockquote>
 
