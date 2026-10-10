@@ -1,6 +1,6 @@
 kurigram
 pymongo
-tgcrypto
+TgCrypto
 dnspython
 pytz
 motor
