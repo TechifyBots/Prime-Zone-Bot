@@ -42,6 +42,18 @@ async def start_command(client, message):
         ])
     )
 
+@Client.on_message(filters.command("help") & filters.private)
+async def help_cmd(client, message):
+    msg = await message.reply(text.GUIDE,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎬 𝖶𝖺𝗍𝖼𝗁 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅", url="https://youtu.be/jcIrYkVy0d0", style=enums.ButtonStyle.PRIMARY)]])
+    )
+    await asyncio.sleep(300)
+    try:
+        await msg.delete()
+        await message.delete()
+    except Exception:
+        pass
+
 @Client.on_message(filters.command("getvideos") & filters.private)
 async def send_random_video(client: Client, message: Message):
     if await udb.is_user_banned(message.from_user.id):
