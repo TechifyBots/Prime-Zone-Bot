@@ -49,7 +49,7 @@ async def callback_query_handler(client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("📂 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾", url="https://github.com/TechifyBots/Prime-Zone-Bot")],
                     [InlineKeyboardButton("☕ 𝖣𝗈𝗇𝖺𝗍𝖾", callback_data="donate"),
-                     InlineKeyboardButton("👨‍💻 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", user_id=int(ADMIN))],
+                     InlineKeyboardButton("👨‍💻 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", user_id=int(ADMIN_ID))],
                     [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄", callback_data="start", style=enums.ButtonStyle.PRIMARY)]
                 ])
             )
