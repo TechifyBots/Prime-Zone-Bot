@@ -1,19 +1,20 @@
 import os
 from typing import List
 
-API_ID = int(os.getenv("API_ID", ""))
-API_HASH = os.getenv("API_HASH", "")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-MONGO_URI = os.getenv("MONGO_URI", "")
-DATABASE_CHANNEL_ID = int(os.getenv("DATABASE_CHANNEL_ID", ""))
-ADMIN_ID = int(os.getenv("ADMIN_ID", "1255023013"))
-PICS = (os.environ.get("PICS", "https://i.ibb.co/MDssddJp/pic.jpg https://i.ibb.co/n8fQ2xcx/pic.jpg")).split()
-LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", ""))
-ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "TechifyBots") # Without @
-IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" For Enable Force Subscribe
-AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split())) # Add Multiple channel ids
-AUTH_REQ_CHANNELS = list(map(int, os.environ.get("AUTH_REQ_CHANNELS", "").split())) # Add Multiple channel ids
-FSUB_EXPIRE = int(os.environ.get("FSUB_EXPIRE", 2))  # minutes, 0 = no expiry
-DATABASE_CHANNEL_LOG = int(os.getenv("DATABASE_CHANNEL_LOG", ""))
-FREE_VIDEO_DURATION = int(os.getenv("FREE_VIDEO_DURATION", "240"))
-PING_URL = os.environ.get("PING_URL", "") # Service URL for Keep-Alive
+API_ID = int(os.environ.get("API_ID", ""))
+API_HASH = os.environ.get("API_HASH", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+MONGO_URI = os.environ.get("MONGO_URI", "")
+DATABASE_CHANNEL_ID = int(os.environ.get("DATABASE_CHANNEL_ID", ""))
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "1255023013"))
+PICS = os.environ.get("PICS", "https://i.ibb.co/MDssddJp/pic.jpg https://i.ibb.co/n8fQ2xcx/pic.jpg").split()
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "TechifyBots")  # Without @
+IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" to enable force subscribe
+AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split()))  # Add multiple channel IDs
+AUTH_REQ_CHANNELS = list(map(int, os.environ.get("AUTH_REQ_CHANNELS", "").split()))  # Add multiple channel IDs
+FSUB_EXPIRE = int(os.environ.get("FSUB_EXPIRE", "2"))  # Minutes, 0 = no expiry
+DATABASE_CHANNEL_LOG = int(os.environ.get("DATABASE_CHANNEL_LOG", ""))
+FREE_VIDEO_DURATION = int(os.environ.get("FREE_VIDEO_DURATION", "240"))
+PING_URL = os.environ.get("PING_URL", "")  # Service URL for keep-alive
+VERSION = os.environ.get("VERSION", "3.0")
