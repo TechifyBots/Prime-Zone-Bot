@@ -72,43 +72,34 @@ If you want to unlock more content and enjoy a smoother experience, consider upg
 <b>Note:</b> Once a plan is selected, it cannot be changed.  
 All payments are <b>non-refundable</b>, so please review your choice carefully before proceeding.</blockquote>"""
 
-  ADMIN_COMMANDS = """<b><u>⭐ Admin Commands</u>
-                                      
-» /setlimit — Increase the daily usage limit for any user (applies to both Free and Prime users).
+  ADMIN_COMMANDS =   """<blockquote>⚙️ 𝗔𝗱𝗺𝗶𝗻 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</blockquote>
 
-» /maintenance — Toggle maintenance mode ON or OFF.
+👤 /setlimit — 𝖨𝗇𝖼𝗋𝖾𝖺𝗌𝖾 𝗍𝗁𝖾 𝖽𝖺𝗂𝗅𝗒 𝗎𝗌𝖺𝗀𝖾 𝗅𝗂𝗆𝗂𝗍 𝖿𝗈𝗋 𝖺𝗇𝗒 𝗎𝗌𝖾𝗋 (𝖥𝗋𝖾𝖾 & 𝖯𝗋𝗂𝗆𝖾).
+🔧 /maintenance — 𝖳𝗈𝗀𝗀𝗅𝖾 𝗆𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 𝗆𝗈𝖽𝖾 𝖮𝖭 𝗈𝗋 𝖮𝖥𝖥.
+💎 /prime — 𝖦𝗋𝖺𝗇𝗍 𝖯𝗋𝗂𝗆𝖾 𝗆𝖾𝗆𝖻𝖾𝗋𝗌𝗁𝗂𝗉 𝗍𝗈 𝖺 𝗎𝗌𝖾𝗋.
+❌ /remove — 𝖱𝖾𝗆𝗈𝗏𝖾 𝖺 𝗎𝗌𝖾𝗋'𝗌 𝖯𝗋𝗂𝗆𝖾 𝗆𝖾𝗆𝖻𝖾𝗋𝗌𝗁𝗂𝗉.
+🗑️ /deleteall — 𝖣𝖾𝗅𝖾𝗍𝖾 𝖺𝗅𝗅 𝗏𝗂𝖽𝖾𝗈𝗌 𝖿𝗋𝗈𝗆 𝗍𝗁𝖾 𝖽𝖺𝗍𝖺𝖻𝖺𝗌𝖾.
+🎯 /delete — 𝖣𝖾𝗅𝖾𝗍𝖾 𝖺 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝗏𝗂𝖽𝖾𝗈 𝗎𝗌𝗂𝗇𝗀 𝗂𝗍𝗌 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝖨𝖣.
+📢 /broadcast — 𝖲𝖾𝗇𝖽 𝖺 𝖻𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗍𝗈 𝖺𝗅𝗅 𝗎𝗌𝖾𝗋𝗌.
+🚫 /ban — 𝖡𝖺𝗇 𝖺 𝗎𝗌𝖾𝗋 𝖿𝗋𝗈𝗆 𝗎𝗌𝗂𝗇𝗀 𝗍𝗁𝖾 𝖻𝗈𝗍.
+✅ /unban — 𝖴𝗇𝖻𝖺𝗇 𝖺 𝗉𝗋𝖾𝗏𝗂𝗈𝗎𝗌𝗅𝗒 𝖻𝖺𝗇𝗇𝖾𝖽 𝗎𝗌𝖾𝗋.
+📋 /banlist — 𝖵𝗂𝖾𝗐 𝗍𝗁𝖾 𝗅𝗂𝗌𝗍 𝗈𝖿 𝖻𝖺𝗇𝗇𝖾𝖽 𝗎𝗌𝖾𝗋𝗌.
+📊 /stats — 𝖵𝗂𝖾𝗐 𝖽𝖾𝗍𝖺𝗂𝗅𝖾𝖽 𝖻𝗈𝗍 𝗌𝗍𝖺𝗍𝗂𝗌𝗍𝗂𝖼𝗌."""
 
-» /prime — Add a user to the Prime membership.
+  HELP = """<blockquote>📖 𝗕𝗼𝘁 𝗚𝘂𝗶𝗱𝗲</blockquote>
 
-» /remove — Remove a user from Prime membership.
+🔞 𝖳𝗁𝗂𝗌 𝖻𝗈𝗍 𝗂𝗌 𝗌𝗉𝖾𝖼𝗂𝖺𝗅𝗅𝗒 𝖽𝖾𝗌𝗂𝗀𝗇𝖾𝖽 𝖿𝗈𝗋 𝖺𝖽𝗎𝗅𝗍 𝗎𝗌𝖾𝗋𝗌 (𝟣𝟪+) 𝖺𝗇𝖽 𝗉𝗋𝗈𝗏𝗂𝖽𝖾𝗌 𝖾𝖺𝗌𝗒 𝖺𝖼𝖼𝖾𝗌𝗌 𝗍𝗈 𝖼𝗈𝗇𝗍𝖾𝗇𝗍 𝗎𝗌𝗂𝗇𝗀 𝗌𝗂𝗆𝗉𝗅𝖾 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌.
 
-» /deleteall — Delete all videos from the database.
+🎬 /getvideos — 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖺𝗇 𝖺𝖽𝗎𝗅𝗍 𝗏𝗂𝖽𝖾𝗈.
+📊 /myplan — 𝖢𝗁𝖾𝖼𝗄 𝗒𝗈𝗎𝗋 𝖽𝖺𝗂𝗅𝗒 𝗎𝗌𝖺𝗀𝖾 𝗅𝗂𝗆𝗂𝗍 𝖺𝗇𝖽 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 𝖽𝖾𝗍𝖺𝗂𝗅𝗌.
 
-» /delete — Delete a specific video using its Telegram message ID.
+💎 <b>𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖯𝗅𝖺𝗇𝗌</b>
 
-» /broadcast — Send a message broadcast to all users.
+🆓 𝖥𝗋𝖾𝖾 — 𝖤𝗇𝗃𝗈𝗒 𝖻𝖺𝗌𝗂𝖼 𝖺𝖼𝖼𝖾𝗌𝗌.
+🥈 𝖲𝗂𝗅𝗏𝖾𝗋 — 𝖤𝗇𝗁𝖺𝗇𝖼𝖾 𝗒𝗈𝗎𝗋 𝖾𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾.
+🥇 𝖦𝗈𝗅𝖽 — 𝖤𝗇𝗃𝗈𝗒 𝖾𝗑𝗍𝖾𝗇𝖽𝖾𝖽 𝖺𝖼𝖼𝖾𝗌𝗌.
+💠 𝖣𝗂𝖺𝗆𝗈𝗇𝖽 — 𝖴𝗇𝗅𝗈𝖼𝗄 𝗍𝗁𝖾 𝗁𝗂𝗀𝗁𝖾𝗌𝗍 𝗎𝗌𝖺𝗀𝖾 𝗅𝗂𝗆𝗂𝗍𝗌.
 
-» /ban — Ban a specific user.
+⚡ 𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝗉𝗅𝖺𝗇𝗌 𝗈𝖿𝖿𝖾𝗋 𝗁𝗂𝗀𝗁𝖾𝗋 𝗎𝗌𝖺𝗀𝖾 𝗅𝗂𝗆𝗂𝗍𝗌, 𝖿𝖺𝗌𝗍𝖾𝗋 𝖺𝖼𝖼𝖾𝗌𝗌, 𝖺𝗇𝖽 𝖾𝗑𝗍𝗋𝖺 𝖿𝖾𝖺𝗍𝗎𝗋𝖾𝗌 𝖿𝗈𝗋 𝖺 𝗌𝗆𝗈𝗈𝗍𝗁𝖾𝗋 𝖾𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾.
 
-» /unban — Unban a specific user.
-
-» /banlist — To check banned Users.
-
-» /stats — View detailed bot statistics.</b>"""
-  
-  HELP = """<b>𝖡𝗈𝗍 𝖣𝗂𝗌𝖼𝗅𝖺𝗂𝗆𝖾𝗋 & 𝖴𝗌𝖺𝗀𝖾 𝖦𝗎𝗂𝖽𝖾:</b>
-
-𝖳𝗁𝗂𝗌 𝖻𝗈𝗍 𝗂𝗌 𝗌𝗉𝖾𝖼𝗂𝖺𝗅𝗅𝗒 𝖽𝖾𝗌𝗂𝗀𝗇𝖾𝖽 𝖿𝗈𝗋 𝖺𝖽𝗎𝗅𝗍 𝗎𝗌𝖾𝗋𝗌 (𝟣𝟪+) 𝖺𝗇𝖽 𝖾𝗇𝖺𝖻𝗅𝖾𝗌 𝖾𝖺𝗌𝗒 𝖺𝖼𝖼𝖾𝗌𝗌 𝗍𝗈 𝖼𝗈𝗇𝗍𝖾𝗇𝗍 𝗏𝗂𝖺 𝗌𝗂𝗆𝗉𝗅𝖾 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌.
-
-» /getvideos 𝗍𝗈 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝖺 𝖺𝖽𝗎𝗅𝗍 𝗏𝗂𝖽𝖾𝗈
-» /myplan 𝗍𝗈 𝖼𝗁𝖾𝖼𝗄 𝗒𝗈𝗎𝗋 𝖽𝖺𝗂𝗅𝗒 𝗅𝗂𝗆𝗂𝗍 𝖺𝗇𝖽 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 𝖽𝖾𝗍𝖺𝗂𝗅𝗌
-
-𝖠𝗅𝗈𝗇𝗀 𝗐𝗂𝗍𝗁 𝗍𝗁𝖾 𝖿𝗋𝖾𝖾 𝗉𝗅𝖺𝗇, 𝗐𝖾 𝗈𝖿𝖿𝖾𝗋 𝗉𝗋𝖾𝗆𝗂𝗎𝗆 𝗉𝗅𝖺𝗇𝗌:
-
-» 𝖲𝗂𝗅𝗏𝖾𝗋
-» 𝖦𝗈𝗅𝖽
-» 𝖣𝗂𝖺𝗆𝗈𝗇𝖽
-
-𝖳𝗁𝖾𝗌𝖾 𝗉𝗅𝖺𝗇𝗌 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝗁𝗂𝗀𝗁𝖾𝗋 𝗎𝗌𝖺𝗀𝖾 𝗅𝗂𝗆𝗂𝗍𝗌, 𝖿𝖺𝗌𝗍𝖾𝗋 𝖺𝖼𝖼𝖾𝗌𝗌, 𝖺𝗇𝖽 𝖺𝖽𝗏𝖺𝗇𝖼𝖾𝖽 𝖿𝖾𝖺𝗍𝗎𝗋𝖾𝗌 𝖿𝗈𝗋 𝖺 𝗌𝗆𝗈𝗈𝗍𝗁𝖾𝗋 𝖾𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾.
-
-<blockquote><b>𝖭𝗈𝗍𝖾:</b> 𝖳𝗁𝗂𝗌 𝖻𝗈𝗍 𝗂𝗌 𝗌𝗍𝗋𝗂𝖼𝗍𝗅𝗒 𝗂𝗇𝗍𝖾𝗇𝖽𝖾𝖽 𝖿𝗈𝗋 𝖺𝖽𝗎𝗅𝗍𝗌 (𝟣𝟪+). 𝖴𝗌𝖾 𝗂𝗍 𝖺𝗍 𝗒𝗈𝗎𝗋 𝗈𝗐𝗇 𝗋𝗂𝗌𝗄.</blockquote>"""
+<blockquote>⚠️ <b>𝖭𝗈𝗍𝖾:</b> 𝖳𝗁𝗂𝗌 𝖻𝗈𝗍 𝗂𝗌 𝗌𝗍𝗋𝗂𝖼𝗍𝗅𝗒 𝗂𝗇𝗍𝖾𝗇𝖽𝖾𝖽 𝖿𝗈𝗋 𝖺𝖽𝗎𝗅𝗍𝗌 (𝟣𝟪+). 𝖡𝗒 𝗎𝗌𝗂𝗇𝗀 𝗍𝗁𝗂𝗌 𝖻𝗈𝗍, 𝗒𝗈𝗎 𝖼𝗈𝗇𝖿𝗂𝗋𝗆 𝗍𝗁𝖺𝗍 𝗒𝗈𝗎 𝗆𝖾𝖾𝗍 𝗍𝗁𝗂𝗌 𝖺𝗀𝖾 𝗋𝖾𝗊𝗎𝗂𝗋𝖾𝗆𝖾𝗇𝗍. 𝖴𝗌𝖾 𝗂𝗍 𝗋𝖾𝗌𝗉𝗈𝗇𝗌𝗂𝖻𝗅𝗒.</blockquote>"""
