@@ -1,8 +1,7 @@
 from pyrogram import Client, filters
-from vars import *
-from Database.maindb import mdb
 from pyrogram.types import Message
-from pyrogram.types import *
+from config import DATABASE_CHANNEL_ID, DATABASE_CHANNEL_LOG, FREE_VIDEO_DURATION
+from Database.maindb import mdb
 
 @Client.on_message(filters.chat(DATABASE_CHANNEL_ID) & filters.video)
 async def save_video(client: Client, message: Message):
