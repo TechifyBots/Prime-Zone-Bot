@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from Script import text
 from Database.maindb import mdb
 from Database.userdb import udb
-from config import ADMIN_ID, LOG_CHANNEL, PICS, DATABASE_CHANNEL_ID, FREE_LIMIT, PRIME_LIMIT
+from config import ADMIN_ID, LOG_CHANNEL, PICS, DATABASE_CHANNEL_ID
 
 async def get_updated_limits():
         global FREE_LIMIT, PRIME_LIMIT
