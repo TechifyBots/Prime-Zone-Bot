@@ -109,6 +109,7 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 | `DATABASE_CHANNEL_ID` | Database channel ID for bot to store content |
 | `DATABASE_CHANNEL_LOG` | Channel ID for Database logs |
 | `PING_URL` | Service URL for Keep-alive |
+| `SOURCE_CODE` | GitHub repository URL |
 
 ### 📚 Setup Guides
 
