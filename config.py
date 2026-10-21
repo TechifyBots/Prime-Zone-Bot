@@ -17,3 +17,4 @@ DATABASE_CHANNEL_LOG = int(os.environ.get("DATABASE_CHANNEL_LOG", ""))
 FREE_VIDEO_DURATION = int(os.environ.get("FREE_VIDEO_DURATION", "240"))
 PING_URL = os.environ.get("PING_URL", "")  # Service URL for keep-alive
 VERSION = os.environ.get("VERSION", "3.0")
+SOURCE_CODE = os.environ.get("SOURCE_CODE", "https://github.com/TechifyBots/Prime-Zone-Bot")
