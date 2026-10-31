@@ -7,7 +7,7 @@ class text(object):
 
 𝖲𝗈𝗆𝖾 𝗆𝖺𝗍𝖾𝗋𝗂𝖺𝗅 𝗆𝖺𝗒 𝗂𝗇𝖼𝗅𝗎𝖽𝖾 𝖾𝗑𝗉𝗅𝗂𝖼𝗂𝗍 𝗈𝗋 𝗀𝗋𝖺𝗉𝗁𝗂𝖼 𝖼𝗈𝗇𝗍𝖾𝗇𝗍 𝗍𝗁𝖺𝗍 𝗂𝗌 𝗇𝗈𝗍 𝗌𝗎𝗂𝗍𝖺𝖻𝗅𝖾 𝖿𝗈𝗋 𝗆𝗂𝗇𝗈𝗋𝗌.
 
-<blockquote><b>‣ 𝖬𝖺𝗂𝗇𝗍𝖺𝗂𝗇𝖾𝖽 𝖡𝗒: <a href='https://techifybots.vercel.app'>𝖳𝖾𝖼𝗁𝗂𝖿𝗒 𝖡𝗈𝗍𝗌</a></b></blockquote>"""
+<b><blockquote>‣ 𝖬𝖺𝗂𝗇𝗍𝖺𝗂𝗇𝖾𝖽 𝖡𝗒: <a href='https://rahuldhankhar.vercel.app/'>𝖱𝖺𝗁𝗎𝗅</a></blockquote></b>"""
 
   LOG = """<blockquote>👁️‍🗨️ 𝗨𝘀𝗲𝗿 𝗗𝗲𝘁𝗮𝗶𝗹𝘀</blockquote>
 
@@ -26,7 +26,9 @@ class text(object):
 <b>‣ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 :</b> <a href='https://www.mongodb.com/'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡</a>
 <b>‣ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 :</b> <a href='https://www.python.org/download/releases/3.0/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
 <b>‣ 𝖡𝗈𝗍 𝖲𝖾𝗋𝗏𝖾𝗋 :</b> <a href='https://www.koyeb.com/'>𝖪𝗈𝗒𝖾𝖻</a>
-<b>‣ 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖡𝗒 :</b> <a href='https://telegram.me/callownerbot'>𝖱𝖺𝗁𝗎𝗅</a>"""
+<b>‣ 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖡𝗒 :</b> <a href='https://techifybots.vercel.app/'>𝖳𝖾𝖼𝗁𝗂𝖿𝗒 𝖡𝗈𝗍𝗌</a>
+
+🌟 𝘛𝘩𝘢𝘯𝘬𝘴 𝘧𝘰𝘳 𝘶𝘴𝘪𝘯𝘨 𝘵𝘩𝘦 𝘣𝘰𝘵!"""
 
   GUIDE = """<blockquote>❓ 𝗛𝗮𝘃𝗶𝗻𝗴 𝗧𝗿𝗼𝘂𝗯𝗹𝗲?</blockquote>
 
