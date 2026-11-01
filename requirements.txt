@@ -1,6 +1,7 @@
 kurigram
-TgCrypto
+tgcrypto
 dnspython
 pytz
 motor
 aiohttp
+requests
