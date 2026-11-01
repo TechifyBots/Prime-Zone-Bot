@@ -1,4 +1,5 @@
 import os
+import requests
 from typing import List
 
 API_ID = int(os.environ.get("API_ID", ""))
@@ -7,7 +8,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 MONGO_URI = os.environ.get("MONGO_URI", "")
 DATABASE_CHANNEL_ID = int(os.environ.get("DATABASE_CHANNEL_ID", ""))
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "1255023013"))
-PICS = os.environ.get("PICS", "https://i.ibb.co/MDssddJp/pic.jpg https://i.ibb.co/n8fQ2xcx/pic.jpg").split()
+PICS: List[str] = requests.get("https://raw.githubusercontent.com/TechifyBots/TechifyBots/main/assets/pics.txt").text.split()
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
 IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" to enable force subscribe
 AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split()))  # Add multiple channel IDs
