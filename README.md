@@ -122,8 +122,8 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 ## 🤖 Commands
 
 ```
-start - Check Bot Alive.
-help - Bot usage guide.
+start - Start the bot.
+help - Get the bot usage guide.
 myplan - Check your current plan.
 stats - View bot statistics.
 broadcast - Send message to all users
